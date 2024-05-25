@@ -13,6 +13,10 @@
 		6E2D55762C021C680065C3A5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6E2D55752C021C680065C3A5 /* Base */; };
 		6E2D55782C021C6A0065C3A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E2D55772C021C6A0065C3A5 /* Assets.xcassets */; };
 		6E2D557B2C021C6A0065C3A5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6E2D557A2C021C6A0065C3A5 /* Base */; };
+		6E2D55832C0222320065C3A5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2D55822C0222320065C3A5 /* HomeViewController.swift */; };
+		6E2D55852C0222660065C3A5 /* NewHotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2D55842C0222660065C3A5 /* NewHotViewController.swift */; };
+		6E2D55872C02228D0065C3A5 /* SaveContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2D55862C02228D0065C3A5 /* SaveContentsViewController.swift */; };
+		6E2D55892C0222D60065C3A5 /* NetflixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2D55882C0222D60065C3A5 /* NetflixViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		6E2D55772C021C6A0065C3A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E2D557A2C021C6A0065C3A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E2D557C2C021C6A0065C3A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E2D55822C0222320065C3A5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6E2D55842C0222660065C3A5 /* NewHotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHotViewController.swift; sourceTree = "<group>"; };
+		6E2D55862C02228D0065C3A5 /* SaveContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveContentsViewController.swift; sourceTree = "<group>"; };
+		6E2D55882C0222D60065C3A5 /* NetflixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				6E2D55772C021C6A0065C3A5 /* Assets.xcassets */,
 				6E2D55792C021C6A0065C3A5 /* LaunchScreen.storyboard */,
 				6E2D557C2C021C6A0065C3A5 /* Info.plist */,
+				6E2D55822C0222320065C3A5 /* HomeViewController.swift */,
+				6E2D55842C0222660065C3A5 /* NewHotViewController.swift */,
+				6E2D55862C02228D0065C3A5 /* SaveContentsViewController.swift */,
+				6E2D55882C0222D60065C3A5 /* NetflixViewController.swift */,
 			);
 			path = netflix;
 			sourceTree = "<group>";
@@ -139,8 +151,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E2D55732C021C680065C3A5 /* ViewController.swift in Sources */,
+				6E2D55852C0222660065C3A5 /* NewHotViewController.swift in Sources */,
 				6E2D556F2C021C680065C3A5 /* AppDelegate.swift in Sources */,
 				6E2D55712C021C680065C3A5 /* SceneDelegate.swift in Sources */,
+				6E2D55872C02228D0065C3A5 /* SaveContentsViewController.swift in Sources */,
+				6E2D55832C0222320065C3A5 /* HomeViewController.swift in Sources */,
+				6E2D55892C0222D60065C3A5 /* NetflixViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +314,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +324,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.netflix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -326,8 +347,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +357,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.netflix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
